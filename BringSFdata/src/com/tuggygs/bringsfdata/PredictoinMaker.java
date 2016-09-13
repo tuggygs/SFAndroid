@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Turgay on 7/1/2016.
+ * Created by Turgay on 7/1/2016.    just for test
  */
 public class PredictoinMaker extends SalesforceActivity {
 
