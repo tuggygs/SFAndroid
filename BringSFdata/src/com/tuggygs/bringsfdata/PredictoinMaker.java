@@ -77,8 +77,6 @@ public class PredictoinMaker extends SalesforceActivity {
         saveButton.setVisibility(View.INVISIBLE);
         tpoints.setVisibility(View.INVISIBLE);
 
-        Log.e("TEST", "TESTTTTTTTTTTTTTTTTTTTTTT");
-
         spinnerFood.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -135,7 +133,7 @@ public class PredictoinMaker extends SalesforceActivity {
                                         Log.e("MATCH POINTS ====> ", matchPoints);
                                     }else {
                                         Log.e("No value for ", "Predictions__r...");
-                                        tpoints.setText("Total points: " + "0");
+                                        tpoints.setText("Total points:-- " + "0");
                                     }
 
                                     tpoints.setText("Total points: " + totalPoints.toString());
