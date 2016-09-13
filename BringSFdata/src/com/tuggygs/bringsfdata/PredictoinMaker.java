@@ -77,6 +77,8 @@ public class PredictoinMaker extends SalesforceActivity {
         saveButton.setVisibility(View.INVISIBLE);
         tpoints.setVisibility(View.INVISIBLE);
 
+        Log.e("TEST", "TEST");
+
         spinnerFood.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
