@@ -1,0 +1,17 @@
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$style$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\PredictorLogin$1$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\ScoreEditor$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\AccountDetails$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\PredictoinMaker$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$id$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$xml$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\salesforce\androidsdk\R$id$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\ContactDetails$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\AccountListView$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$menu$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$string$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\R$layout$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\PredictorRegistration$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\MainActivity$override.class
+CHANGED,C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tuggygs\bringsfdata\PredictorLogin$override.class

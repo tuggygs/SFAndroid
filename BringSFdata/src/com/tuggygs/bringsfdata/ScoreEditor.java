@@ -54,28 +54,29 @@ public class ScoreEditor extends SalesforceActivity {
             }
         });
 
-        saveScores_btn = (Button) findViewById(R.id.saveScores);
-        saveScores_btn.setVisibility(View.INVISIBLE);
+        //saveScores_btn = (Button) findViewById(R.id.saveScores);
+        //saveScores_btn.setVisibility(View.INVISIBLE);
     }
 
     private void sendRequest() throws UnsupportedEncodingException {
 
-        saveScores_btn.setVisibility(View.VISIBLE);
+        //saveScores_btn.setVisibility(View.VISIBLE);
         //ll_outer.removeAllViewsInLayout();
+
 
         RestRequest restRequest = RestRequest.getRequestForQuery(getString(R.string.api_version), soql);
 
         clientt.sendAsync(restRequest, new RestClient.AsyncRequestCallback() {
             @Override
             public void onSuccess(RestRequest request, RestResponse result) {
-
+                int count = 0;
                 Log.d("RRRRESPPP2====>", String.valueOf(result));
 
                 try {
 
                     JSONArray records = result.asJSONObject().getJSONArray("records");
 
-                    int count = 0;
+
                     String hGoalsFT, aGoalsFT, homeTeam, awayTeam;
                     // looping through All Matches
                     for(int i = 0; i < records.length(); i++) {
@@ -88,6 +89,7 @@ public class ScoreEditor extends SalesforceActivity {
                         EditText hgoalsFT_et = new EditText(getApplicationContext());
                         TextView away_tv = new TextView(getApplicationContext());
                         EditText agoalsFT_et = new EditText(getApplicationContext());
+                        Button save_btn = new Button(getApplicationContext());
 
                         homeTeam = records.getJSONObject(i).getString(TAG_HOME_TEAM);
                         awayTeam = records.getJSONObject(i).getString(TAG_AWAY_TEAM);
@@ -112,6 +114,7 @@ public class ScoreEditor extends SalesforceActivity {
                         hgoalsFT_et.setId(++count);
                         agoalsFT_et.setId(++count);
                         away_tv.setId(++count);
+                        save_btn.setId(++count);
                         count++;
 
                         row.addView(home_tv);
@@ -122,6 +125,17 @@ public class ScoreEditor extends SalesforceActivity {
                         agoalsFT_et.setText(aGoalsFT);
                         row.addView(away_tv);
                         away_tv.setText(awayTeam);
+
+                        row.addView(save_btn);
+                        save_btn.setText("Save Match " + String.valueOf(count-(4*(i+1))));
+                        final int finalCount = count-1;
+                        save_btn.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View v) {
+                                Log.e("BUTTON ID ===>", String.valueOf(finalCount));
+                                saveScores(v, finalCount);
+
+                            }
+                        });
 
                         ll_outer.addView(row);
                     }
@@ -140,19 +154,21 @@ public class ScoreEditor extends SalesforceActivity {
     }
 
 //================================================================
-    public void saveScores(View v) {
+    public void saveScores(View v, Integer bId) {
 
         String reqURL = "https://eu6.salesforce.com/services/apexrest/SaveScores/", wholeURL;
-        int id1 = 1, id2 = 2, nextET = 0;
+        int id1 = 1, id2 = 2, nextET;
         EditText gh, ga;
         TextView ht, at;
         RestRequest restRequest;
 
-        do {
-            gh = (EditText) ll_outer.findViewById(id1 + nextET);
-            ga = (EditText) ll_outer.findViewById(id2 + nextET);
-            ht = (TextView) ll_outer.findViewById(id1 + nextET - 1);
-            at = (TextView) ll_outer.findViewById(id2 + nextET + 1);
+        nextET = bId%4;
+        Log.e("nextET ===>", String.valueOf(nextET));
+       // do {
+            gh = (EditText) ll_outer.findViewById(id1 + nextET*5);
+            ga = (EditText) ll_outer.findViewById(id2 + nextET*5);
+            ht = (TextView) ll_outer.findViewById(id1 + nextET*5 - 1);
+            at = (TextView) ll_outer.findViewById(id2 + nextET*5 + 1);
 
             if(gh != null || ga != null) {
 
@@ -183,9 +199,9 @@ public class ScoreEditor extends SalesforceActivity {
                 });
             }
 
-            nextET = nextET + 4;
+           // nextET = nextET + 5;
 
-        }while(gh != null || ga != null);
+       // }while(gh != null || ga != null);
 
     }
 //================================================================

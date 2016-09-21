@@ -4,30 +4,47 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="347731696537"
+    timestamp="20605088011902"
     token="-402142551226912704" >
 
     <task
         name="javac"
-        duration="9677" />
+        duration="1299" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1618" />
+        duration="237" />
     <task
         name="verifier"
-        duration="859" />
+        duration="104" />
 
     <artifact
-        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\outputs\apk\BringSFdata-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
 
-    <build timestamp="347731696537" >
+    <build timestamp="1133419462242" >
         <artifact
             location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\outputs\apk\BringSFdata-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="20605088011902" >
+        <artifact
+            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
