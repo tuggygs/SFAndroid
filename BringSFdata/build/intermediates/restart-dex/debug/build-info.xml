@@ -4,47 +4,27 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="20605088011902"
+    timestamp="23032823203444"
     token="-402142551226912704" >
 
     <task
         name="javac"
-        duration="1299" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="237" />
+        duration="0" />
     <task
         name="verifier"
-        duration="104" />
+        duration="0" />
 
-    <artifact
-        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
-
-    <build timestamp="1133419462242" >
+    <build timestamp="560642998533" >
         <artifact
             location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\outputs\apk\BringSFdata-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="20605088011902" >
-        <artifact
-            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Turgay\AndroidStudioProjects\SFAndroid\BringSFdata\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
+    <build timestamp="23032823203444" />
 
 </instant-run>

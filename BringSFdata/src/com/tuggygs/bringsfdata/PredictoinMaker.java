@@ -271,7 +271,6 @@ public class PredictoinMaker extends SalesforceActivity {
 
         spinnerFood.setVisibility(View.VISIBLE);
         saveButton.setVisibility(View.VISIBLE);
-
         tpoints.setVisibility(View.VISIBLE);
 
         RestRequest restRequest = new RestRequest(RestRequest.RestMethod.GET, "https://eu6.salesforce.com/services/apexrest/Predictors", null);
