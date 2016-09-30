@@ -122,11 +122,11 @@ public class MainActivity extends SalesforceActivity {
 //===========================================================================================
 public void makePredictions(View v) {
 
-	Intent i = new Intent(MainActivity.this, PredictoinMaker.class);
-	startActivity(i);
-
-	//Intent i = new Intent(MainActivity.this, PredictorLogin.class);
+	//Intent i = new Intent(MainActivity.this, PredictoinMaker.class);
 	//startActivity(i);
+
+	Intent i = new Intent(MainActivity.this, PredictorLogin.class);
+	startActivity(i);
 
 	//sendRequest("SELECT Name FROM Contact");
 }

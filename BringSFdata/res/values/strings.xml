@@ -71,6 +71,7 @@
 	<string name="prName">Name</string>
 	<string name="tempButton">List Current Matches</string>
 	<string name="save_scores">Save Scores</string>
+	<string name="logout">Logout</string>
 
 
 </resources>

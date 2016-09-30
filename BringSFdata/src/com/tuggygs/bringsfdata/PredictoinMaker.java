@@ -44,7 +44,7 @@ public class PredictoinMaker extends SalesforceActivity {
     private ArrayList<String> predictorList;
     JSONArray predictors = null, matches = null;
     private static final String TAG_NAME = "Name", TAG_HOME_TEAM = "Home__c", TAG_AWAY_TEAM = "Away__c", TAG_TOTAL_POINTS = "TotalPoints__c";
-    private String selectedPredictor;
+    private String selectedPredictor, logedinPredictor;
     private Integer totalPoints = 0;
     Map<String, Object> fields = new HashMap<String, Object>();
     private Button saveButton;
@@ -59,10 +59,11 @@ public class PredictoinMaker extends SalesforceActivity {
         setContentView(R.layout.prediction_activity);
 
         Intent intent = getIntent();
-      /*  if (intent != null) {
-            selectedPredictor = intent.getStringExtra("LOGEDIN_PREDICTOR");
+        if(intent != null) {
+            logedinPredictor = intent.getStringExtra("LOGEDIN_PREDICTOR");
+            selectedPredictor = logedinPredictor;
             Log.e("LOGEDIN_PREDICTOR_1", selectedPredictor);
-        } */
+        }
 
         spinnerFood = (Spinner) findViewById(R.id.spinPredictors);
         predictorList = new ArrayList<String>();
@@ -104,6 +105,7 @@ public class PredictoinMaker extends SalesforceActivity {
                                 for(int i = 0; i < matches.length(); i++) {
 
                                     String goalsHome = "", goalsAway = "", matchPoints = "";
+                                    Boolean freezeFlag = false;
                                     LinearLayout row = new LinearLayout(getApplicationContext());
                                     row.setOrientation(LinearLayout.HORIZONTAL);
                                     row.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -121,12 +123,17 @@ public class PredictoinMaker extends SalesforceActivity {
                                     String homeTeam = c.getString(TAG_HOME_TEAM);
                                     String awayTeam = c.getString(TAG_AWAY_TEAM);
 
+                                    if(!c.has("GoalsHomeFT__c") && !c.has("GoalsAwayFT__c")) {
+                                        freezeFlag = true;
+                                    }
+
                                     if(c.has("Predictions__r")) {
                                         JSONArray matchPrediction = c.getJSONObject("Predictions__r").getJSONArray("records");
                                         JSONObject predObj = (JSONObject) matchPrediction.get(0);
 
                                         goalsHome = predObj.optString("Goals_Home__c").toString();
                                         goalsAway = predObj.optString("Goals_Away__c").toString();
+
                                         matchPoints = predObj.optString("MatchPoints__c").toString();
                                         totalPoints = predObj.getJSONObject("MatchPredictor__r").optInt(TAG_TOTAL_POINTS);
 
@@ -145,12 +152,20 @@ public class PredictoinMaker extends SalesforceActivity {
                                     mpoints_tv.setId(++count);
                                     count++;
 
+                                    Log.e("FREEZE FLAG -----> ", String.valueOf(freezeFlag));
+
                                     row.addView(home_tv);
                                     home_tv.setText(homeTeam);
                                     row.addView(hgoals_et);
                                     hgoals_et.setText(goalsHome);
+                                    if(!logedinPredictor.equals(selectedPredictor) || !freezeFlag) {
+                                        hgoals_et.setEnabled(false);
+                                    }
                                     row.addView(agoals_et);
                                     agoals_et.setText(goalsAway);
+                                    if(!logedinPredictor.equals(selectedPredictor) || !freezeFlag) {
+                                        agoals_et.setEnabled(false);
+                                    }
                                     row.addView(away_tv);
                                     away_tv.setText(awayTeam);
 
@@ -313,6 +328,10 @@ public class PredictoinMaker extends SalesforceActivity {
         });
     }
 
+    public void logoutPredictor(View v) {
+        Intent i = new Intent(PredictoinMaker.this, PredictorLogin.class);
+        startActivity(i);
+    }
 
 
 

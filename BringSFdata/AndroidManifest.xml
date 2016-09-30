@@ -14,7 +14,7 @@
 		android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity">
 
 		<!-- Launcher screen -->
-		<activity android:name=".MainActivity"
+		<activity android:name=".PredictorLogin"
 		    android:label="@string/app_name"
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
@@ -34,7 +34,7 @@
 		<activity android:name="com.tuggygs.bringsfdata.PredictoinMaker">
 		</activity>
 
-		<activity android:name="com.tuggygs.bringsfdata.PredictorLogin"/>
+		<activity android:name="com.tuggygs.bringsfdata.MainActivity"/>
 
 		<activity android:name="com.tuggygs.bringsfdata.PredictorRegistration"/>
 

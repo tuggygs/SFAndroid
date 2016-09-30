@@ -128,12 +128,14 @@ public class ScoreEditor extends SalesforceActivity {
 
                         row.addView(save_btn);
                         save_btn.setText("Save Match " + String.valueOf(count-(4*(i+1))));
+
                         final int finalCount = count-1;
+                        final int iCount = i;
                         save_btn.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
                                 Log.e("BUTTON ID ===>", String.valueOf(finalCount));
-                                saveScores(v, finalCount);
-
+                                Log.e("i COUNT ===>", String.valueOf(iCount));
+                                saveScores(v, iCount);
                             }
                         });
 
@@ -162,7 +164,7 @@ public class ScoreEditor extends SalesforceActivity {
         TextView ht, at;
         RestRequest restRequest;
 
-        nextET = bId%4;
+        nextET = bId; //bId%4;
         Log.e("nextET ===>", String.valueOf(nextET));
        // do {
             gh = (EditText) ll_outer.findViewById(id1 + nextET*5);
